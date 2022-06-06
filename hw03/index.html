@@ -1,7 +1,198 @@
+<!DOCTYPE html>
 <html>
-	<head></head>
-	<body> 
-		<ol>
-		</ol>
-	</body>
+<head>
+    <meta charset=utf-8>
+    <title>HW03</title>
+    <base href="/ct2022s/hw03/">
+    <style>
+        @import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
+        @import url(https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap);
+
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: cwTeXFangSong, Oswald, serif
+        }
+
+        #root {
+            background-image: url(main-bg.jpg);
+            background-repeat: repeat-y;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover
+        }
+
+        .hero {
+            padding: 4rem 10rem;
+            color: #fff;
+            background-image: url(hero.jpg);
+            background-position: center;
+            background-size: cover
+        }
+
+        .hero .title {
+            font-size: 2.5rem;
+            border-bottom-style: solid;
+            border-width: 1px;
+            margin-bottom: 5px
+        }
+
+        .hero .sm-title {
+            font-size: 1.5rem;
+            font-style: italic
+        }
+
+        .main {
+            min-height: 100vh;
+            padding: 1rem 5rem
+        }
+
+        .main .item {
+            padding: 2rem;
+            margin: 2rem 0;
+            border-style: solid;
+            border-width: 1px;
+            overflow: auto
+        }
+
+        .main .item-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 2rem 0;
+            width: 100%
+        }
+
+        .main .item-group .item {
+            height: 540px;
+            width: 50%;
+            margin: 0
+        }
+
+        .main .item-group .item:first-child {
+            margin-right: 1rem
+        }
+
+        .main .item.navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+
+        .main .item.navbar img {
+            width: 10%;
+            border-style: solid;
+            margin: 0 2rem;
+            border-radius: 50%;
+            overflow: hidden;
+            cursor: pointer
+        }
+
+        .main .item.navbar img:hover {
+            animation-name: my-rotate;
+            animation-duration: 1s;
+            animation-timing-function: linear
+        }
+
+        .main .item .sm-title {
+            font-size: 1.5rem;
+            display: inline-block;
+            border-bottom-style: solid;
+            border-width: 1px;
+            margin-bottom: 10px
+        }
+
+        .main .item .sm-subtitle {
+            font-size: 1rem;
+            margin-top: -10px;
+            font-style: italic;
+            border-width: 1px;
+            margin-bottom: 10px
+        }
+
+        .main .item .hyperlink a {
+            text-decoration: none
+        }
+
+        .main .item .single-pic img {
+            max-height: 500px;
+            max-width: 100%
+        }
+
+        .main .item .pic-group img {
+            max-height: 200px;
+            max-width: 33%
+        }
+    </style>
+</head>
+<body>
+<div id=root>
+    <div class=hero>
+        <div class=title>HW03 作業</div>
+        <div class=sm-title>文字骨架練習</div>
+    </div>
+    <div class=main>
+        <div class=item id=code-area>
+            <div class=sm-title>HW03 程式碼 超連結</div>
+            <div class=hyperlink><a href="https://t109598105.github.io/CT2021s-hw3-example/" target=_blank>Github 連結</a>
+            </div>
+        </div>
+        <div class=item id=paper-area>
+            <div class=sm-title>PNG 練習圖</div>
+            <div class=sm-subtitle>骨架</div>
+            <div class=single-pic><img src=./data/font.png></div>
+        </div>
+        <div class=item id=gj-area>
+            <div class=sm-title>底圖 PNG</div>
+            <div class=sm-subtitle>骨架</div>
+            <div class=pic-group>
+                <img src=./data/0.png>
+                <img src=./data/1.png>
+                <img src=./data/2.png>
+            </div>
+        </div>
+        <div class=item-group>
+            <div class=item id=heiti-area>
+                <div class=sm-title>底圖+黑體 PNG</div>
+                <div class=sm-subtitle>黑體</div>
+                <div class=pic-group>
+                    <img src=./data/B/0_BG.png>
+                    <img src=./data/B/1_BG.png>
+                    <img src=./data/B/2_BG.png>
+                </div>
+            </div>
+            <div class=item>
+                <div class=sm-title>底圖+黑體 SVG</div>
+                <div class=sm-subtitle>黑體</div>
+                <div class=pic-group>
+                    <img src=./data/B/0_BG.svg>
+                    <img src=./data/B/1_BG.svg>
+                    <img src=./data/B/2_BG.svg>
+                </div>
+            </div>
+        </div>
+        <div class=item-group>
+            <div class=item id=songti-area>
+                <div class=sm-title>底圖+宋體 PNG</div>
+                <div class=sm-subtitle>宋體</div>
+                <div class=pic-group>
+                    <img src=./data/S/0_BG.png>
+                    <img src=./data/S/1_BG.png>
+                    <img src=./data/S/2_BG.png>
+                </div>
+            </div>
+            <div class=item>
+                <div class=sm-title>底圖+宋體 SVG</div>
+                <div class=sm-subtitle>宋體</div>
+                <div class=pic-group>
+                    <img src=./data/S/0_BG.svg>
+                    <img src=./data/S/1_BG.svg>
+                    <img src=./data/S/2_BG.svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id=back-to-top></div>
+</div>
+</body>
 </html>
